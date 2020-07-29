@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PageHeader />
+    
+    <VideoSection />
+    <PageFooter />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import PageFooter from './components/PageFooter.vue'
+  import PageHeader from './components/PageHeader.vue'
+  import VideoSection from './components/VideoSection'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      PageFooter, PageHeader, VideoSection
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @font-face {
+    font-family: "Brandon_Medium";
+    src: url("/fonts/BRANDON_MED.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "Brandon_Light";
+    src: url("/fonts/BRANDON_LIGHT.otf") format("opentype");
+  }
+  
+
+  #app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    letter-spacing: .1em;
+    font-family: 'Brandon_Medium';
+  }
+
+  h3 {
+    letter-spacing: .05em;
+  }
+  body{
+    margin: 0;
+    box-sizing: border-box;
+    color:#393C3E;
+    font-family: "Brandon_Light";
+    letter-spacing: .025em;
+
+  }
+  .padding{
+    padding: 0 5vw;
+  }
+  
 </style>
